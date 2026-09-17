@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soccer - Vidéo d'équipe | Crispy Vision</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0e1a;
+    color: #fff;
+    font-family: 'Georgia', serif;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #0a0e1a;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .logo span { color: #4a90e2; }
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    align-items: center;
+  }
+  .nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .nav-links a.active { color: #4a90e2; }
+  .book-btn {
+    border: 1px solid #4a90e2;
+    color: #4a90e2;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  .page-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+  }
+  .page-header h1 {
+    font-size: 48px;
+    letter-spacing: 3px;
+  }
+  .back-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    padding: 20px 60px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .video-item {
+    background: #131a2b;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .video-item video {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    background: #000;
+  }
+  .empty-msg {
+    text-align: center;
+    color: #888;
+    padding: 60px 20px;
+    font-size: 16px;
+    grid-column: 1 / -1;
+  }
+  @media (max-width: 768px) {
+    nav { padding: 15px 20px; flex-wrap: wrap; }
+    .nav-links { gap: 20px; flex-wrap: wrap; }
+    .gallery-grid { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">CRISPY<span>VISION</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="Basket.html">BASKETBALL</a></li>
+    <li><a href="Soccer.html" class="active">SOCCER</a></li>
+    <li><a href="athletes.html">ATHLETES</a></li>
+    <li><a href="markovic.html">MARKOVIC</a></li>
+  </ul>
+  <a href="#" class="book-btn">BOOK ME</a>
+</nav>
+
+<div class="page-header">
+  <h1>VIDÉO D'ÉQUIPE</h1>
+  <a href="Soccer.html" class="back-link">&larr; Retour à Soccer</a>
+</div>
+
+<div class="gallery-grid">
+
+  <!-- AJOUTE UNE NOUVELLE VIDÉO EN COPIANT CE BLOC -->
+  <div class="video-item">
+    <video src="Soccer/video equipe/NOM_DU_FICHIER.mp4" controls></video>
+  </div>
+
+  <!-- Exemple pour une 2e vidéo, décommente et change le nom du fichier
+  <div class="video-item">
+    <video src="Soccer/video equipe/NOM_DU_FICHIER2.mp4" controls></video>
+  </div>
+  -->
+
+</div>
+
+</body>
+</html>

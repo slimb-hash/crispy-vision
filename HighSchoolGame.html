@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>High School Game – Crispy Vision</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .zigzag-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      max-width: 1100px;
+      margin: 0 auto;
+      overflow-x: hidden;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .zigzag-row {
+      display: flex;
+      gap: 20px;
+      align-items: stretch;
+      width: 100%;
+      min-width: 0;
+    }
+    .zigzag-row.reverse {
+      flex-direction: row-reverse;
+    }
+    .zigzag-row .big-card {
+      flex: 1.6;
+      min-height: 420px;
+      min-width: 0;
+    }
+    .zigzag-row .small-stack {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      min-width: 0;
+    }
+    .zigzag-row .small-stack .proj-card {
+      flex: 1;
+      min-height: 200px;
+      min-width: 0;
+    }
+    .zigzag-gallery .proj-card {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      min-width: 0;
+    }
+    .zigzag-gallery .proj-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+    .zigzag-gallery .proj-card .placeholder-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      opacity: 0.85;
+      pointer-events: none;
+    }
+    .zigzag-gallery .proj-card .placeholder-icon svg {
+      width: 30px;
+      height: 30px;
+      opacity: 0.4;
+    }
+    .zigzag-gallery .proj-card .placeholder-tag {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #4fa3ff;
+      opacity: 0.75;
+    }
+    @media (max-width: 800px) {
+      .zigzag-row, .zigzag-row.reverse {
+        flex-direction: column;
+      }
+      .zigzag-row .small-stack {
+        flex-direction: row;
+      }
+      .zigzag-row .big-card {
+        min-height: 260px;
+      }
+      .zigzag-row .small-stack .proj-card {
+        min-height: 140px;
+      }
+    }
+    .back-link {
+      display:inline-block;
+      color:#4fa3ff;
+      text-decoration:none;
+      font-weight:700;
+      margin-bottom:20px;
+      transition: opacity 0.2s ease;
+    }
+    .back-link:hover { opacity:0.7; }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="logo" onclick="window.location='index.html'">CRISPY<span>VISION</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="basketball.html" class="active-page">Basketball</a></li>
+      <li><a href="soccer.html">Soccer</a></li>
+      <li><a href="athletes.html">Athletes</a></li>
+      <li><a href="markovic.html">Markovic</a></li>
+      <li><a href="booking.html" class="nav-cta">Book Me</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html" class="mobile-link">Home</a></li>
+      <li><a href="basketball.html" class="mobile-link">Basketball</a></li>
+      <li><a href="soccer.html" class="mobile-link">Soccer</a></li>
+      <li><a href="athletes.html" class="mobile-link">Athletes</a></li>
+      <li><a href="markovic.html" class="mobile-link">Markovic</a></li>
+      <li><a href="booking.html" class="mobile-link">Book Me</a></li>
+    </ul>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="background:radial-gradient(ellipse at 30% 50%, rgba(13,61,122,0.5) 0%, transparent 60%), var(--dark)">
+    <div class="page-hero-content reveal">
+      <p class="section-label">// Basketball · Photos</p>
+      <h1>HIGH SCHOOL<span class="blue">GAME</span></h1>
+      <p>Courtside shots and game moments from a high school matchup covered by Crispy Vision.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section">
+    <a href="Photos.html" class="back-link">&larr; Back to Photos</a>
+    <div class="section-header reveal">
+      <p class="section-label">// Gallery</p>
+      <h2>High School<span class="blue">Game</span></h2>
+    </div>
+
+    <div class="zigzag-gallery">
+
+      <div class="zigzag-row reveal">
+        <div class="small-stack">
+          <div class="proj-card">
+            <img src="Basket/Photosevent/High School/DSC09571.JPG" alt="" onerror="this.style.display='none'"/>
+            <div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#4fa3ff" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6c3 3.5 3 9.3 0 12.8M18.4 5.6c-3 3.5-3 9.3 0 12.8"/></svg><span class="placeholder-tag">PHOTO 02</span></div>
+          </div>
+          <div class="proj-card">
+            <img src="Basket/Photosevent/High School/DSC09586.JPG" alt="" onerror="this.style.display='none'"/>
+            <div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#4fa3ff" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6c3 3.5 3 9.3 0 12.8M18.4 5.6c-3 3.5-3 9.3 0 12.8"/></svg><span class="placeholder-tag">PHOTO 03</span></div>
+          </div>
+        </div>
+        <div class="proj-card big-card">
+          <img src="Basket/Photosevent/High School/DSC09428.JPG" alt="" onerror="this.style.display='none'"/>
+          <div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#4fa3ff" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6c3 3.5 3 9.3 0 12.8M18.4 5.6c-3 3.5-3 9.3 0 12.8"/></svg><span class="placeholder-tag">PHOTO 01</span></div>
+        </div>
+      </div>
+
+      <div class="zigzag-row reverse reveal">
+        <div class="small-stack">
+          <div class="proj-card">
+            <img src="Basket/Photosevent/High School/DSC09673.JPG" alt="" onerror="this.style.display='none'"/>
+            <div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#4fa3ff" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6c3 3.5 3 9.3 0 12.8M18.4 5.6c-3 3.5-3 9.3 0 12.8"/></svg><span class="placeholder-tag">PHOTO 05</span></div>
+          </div>
+          <div class="proj-card">
+            <img src="Basket/Photosevent/High School/DSC09701.JPG" alt="" onerror="this.style.display='none'"/>
+            <div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#4fa3ff" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6c3 3.5 3 9.3 0 12.8M18.4 5.6c-3 3.5-3 9.3 0 12.8"/></svg><span class="placeholder-tag">PHOTO 06</span></div>
+          </div>
+        </div>
+        <div class="proj-card big-card">
+          <img src="Basket/Photosevent/High School/DSC09607.JPG" alt="" onerror="this.style.display='none'"/>
+          <div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#4fa3ff" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6c3 3.5 3 9.3 0 12.8M18.4 5.6c-3 3.5-3 9.3 0 12.8"/></svg><span class="placeholder-tag">PHOTO 04</span></div>
+        </div>
+      </div>
+
+      <div class="zigzag-row reveal">
+        <div class="small-stack">
+          <div class="proj-card">
+            <img src="Basket/Photosevent/High School/DSC09799.JPG" alt="" onerror="this.style.display='none'"/>
+            <div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#4fa3ff" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6c3 3.5 3 9.3 0 12.8M18.4 5.6c-3 3.5-3 9.3 0 12.8"/></svg><span class="placeholder-tag">PHOTO 08</span></div>
+          </div>
+          <div class="proj-card">
+            <img src="Basket/Photosevent/High School/DSC09956.JPG" alt="" onerror="this.style.display='none'"/>
+            <div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#4fa3ff" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6c3 3.5 3 9.3 0 12.8M18.4 5.6c-3 3.5-3 9.3 0 12.8"/></svg><span class="placeholder-tag">PHOTO 09</span></div>
+          </div>
+        </div>
+        <div class="proj-card big-card">
+          <img src="Basket/Photosevent/High School/DSC09765.JPG" alt="" onerror="this.style.display='none'"/>
+          <div class="placeholder-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#4fa3ff" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6c3 3.5 3 9.3 0 12.8M18.4 5.6c-3 3.5-3 9.3 0 12.8"/></svg><span class="placeholder-tag">PHOTO 07</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-inner reveal">
+      <p class="section-label">// Let's work</p>
+      <h2>Need a <span class="blue">Basketball Videographer?</span></h2>
+      <p>Tournaments, game days, mixtapes — I cover it all.</p>
+      <a href="booking.html" class="btn btn-blue" style="margin-top:28px;">Book Me</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">CRISPY<span>VISION</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="soccer.html">Soccer</a>
+      <a href="athletes.html">Athletes</a>
+      <a href="booking.html">Booking</a>
+      <a href="https://www.instagram.com/crispy_visiion" target="_blank">Instagram</a>
+    </div>
+    <p class="copy">© 2026 Crispy Vision. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

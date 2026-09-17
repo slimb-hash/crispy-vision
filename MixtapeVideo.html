@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mixtape – Crispy Vision</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="logo" onclick="window.location='index.html'">CRISPY<span>VISION</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="basketball.html" class="active-page">Basketball</a></li>
+      <li><a href="soccer.html">Soccer</a></li>
+      <li><a href="athletes.html">Athletes</a></li>
+      <li><a href="markovic.html">Markovic</a></li>
+      <li><a href="booking.html" class="nav-cta">Book Me</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html" class="mobile-link">Home</a></li>
+      <li><a href="basketball.html" class="mobile-link">Basketball</a></li>
+      <li><a href="soccer.html" class="mobile-link">Soccer</a></li>
+      <li><a href="athletes.html" class="mobile-link">Athletes</a></li>
+      <li><a href="markovic.html" class="mobile-link">Markovic</a></li>
+      <li><a href="booking.html" class="mobile-link">Book Me</a></li>
+    </ul>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="background:radial-gradient(ellipse at 30% 50%, rgba(13,61,122,0.5) 0%, transparent 60%), var(--dark)">
+    <div class="page-hero-content reveal">
+      <p class="section-label">// Basketball · Mixtape</p>
+      <h1 id="videoTitle">MIX<span class="blue">TAPE</span></h1>
+      <p><a href="Mixtape.html" style="color:var(--accent-blue, #1a6fd4); text-decoration:none;">&larr; Back to all mixtapes</a></p>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="section" style="padding-top:0;">
+    <div class="highlight-video-wrap reveal" style="max-width:1100px; margin:0 auto;">
+      <video id="mainVideo" controls autoplay playsinline style="width:100%; border-radius:12px; display:block;">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-inner reveal">
+      <p class="section-label">// Let's work</p>
+      <h2>Need a <span class="blue">Basketball Videographer?</span></h2>
+      <p>Tournaments, game days, mixtapes — I cover it all.</p>
+      <a href="booking.html" class="btn btn-blue" style="margin-top:28px;">Book Me</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">CRISPY<span>VISION</span></div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="soccer.html">Soccer</a>
+      <a href="athletes.html">Athletes</a>
+      <a href="booking.html">Booking</a>
+      <a href="https://www.instagram.com/crispy_visiion" target="_blank">Instagram</a>
+    </div>
+    <p class="copy">© 2026 Crispy Vision. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const src = params.get('src');
+    const title = params.get('title');
+    const video = document.getElementById('mainVideo');
+    if (src) {
+      video.src = src;
+    }
+    if (title) {
+      document.getElementById('videoTitle').innerHTML = title;
+      document.title = title + ' – Crispy Vision';
+    }
+  </script>
+</body>
+</html>
