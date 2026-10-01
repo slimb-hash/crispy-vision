@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Réservations – Crispy Vision</title>
+  <link rel="stylesheet" href="/admin.css" />
+</head>
+<body>
+  <main id="loginView" class="login">
+    <h1>CRISPY<span>VISION</span></h1>
+    <p>Tableau de bord des réservations</p>
+    <form id="loginForm">
+      <label for="password">Mot de passe</label>
+      <input type="password" id="password" autocomplete="current-password" required />
+      <p id="loginError" class="error" role="alert" hidden></p>
+      <button type="submit">Se connecter</button>
+    </form>
+  </main>
+
+  <div id="dashboardView" hidden>
+    <header class="topbar">
+      <h1>CRISPY<span>VISION</span></h1>
+      <button id="logoutBtn" class="ghost">Se déconnecter</button>
+    </header>
+    <main class="dashboard">
+      <h2>Réservations</h2>
+      <nav class="filters" aria-label="Filtrer par statut">
+        <button data-status="" class="active">Toutes <b id="count-all">0</b></button>
+        <button data-status="pending">En attente <b id="count-pending">0</b></button>
+        <button data-status="accepted">Acceptées <b id="count-accepted">0</b></button>
+        <button data-status="declined">Refusées <b id="count-declined">0</b></button>
+      </nav>
+      <p id="dashError" class="error" role="alert" hidden></p>
+      <div id="list"></div>
+    </main>
+  </div>
+
+  <script src="/admin.js"></script>
+</body>
+</html>
