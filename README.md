@@ -1,29 +1,69 @@
 # Crispy Vision
 
-Site portfolio pour Crispy Vision, vidéographe/photographe sportif spécialisé dans la couverture d'événements sportifs universitaires et collégiaux (soccer, basketball).
+Site portfolio développé pour **Crispy Vision**, la marque de Christopher Jean-Louis, vidéaste et photographe sportif (basketball et soccer, niveaux secondaire, collégial et universitaire).
 
-## À propos
+**Site en ligne :** https://slimb-hash.github.io/crispy-vision/
 
-Ce site présente le travail de Crispy Vision à travers plusieurs sections dédiées à différents sports et projets, avec des galeries photo et vidéo organisées par catégorie.
+![Aperçu de la page d'accueil](docs/apercu.png)
 
-## Structure du site
+## Contexte
 
-- **Accueil** (`index.html`) — Page principale de présentation
-- **Basketball** (`basketball.html`) — Couverture des matchs de basketball
-- **Soccer** (`soccer.html`) — Couverture des matchs de soccer, avec sous-pages dédiées :
-  - `soccer-photos.html` — Galerie photo (College Cup)
-  - `soccer-video-equipe.html` — Vidéos d'équipe
-  - `soccer-video-individuel.html` — Vidéos individuelles des joueurs
-- **Athletes** (`athletes.html`) — Mise en avant des athlètes
-- **Markovic** (`markovic.html`) — Section dédiée à un athlète/projet spécifique
-- **Booking** (`booking.html`) — Page de réservation de services
+Projet réalisé pour un vrai client. Christopher avait besoin d'un site pour présenter son travail (photos, vidéos, graphiques), mettre en avant les athlètes qu'il couvre et recevoir des demandes de réservation. J'ai conçu et développé le site de A à Z : structure, design, intégration et mise en ligne.
 
-## Technologies utilisées
+## Fonctionnalités
+
+- Page d'accueil avec présentation, travaux en vedette, clients et appel à l'action
+- Galeries photo et vidéo organisées par sport et par événement
+- Pages dédiées aux athlètes, dont une section sur Nikola Markovic (1er choix au repêchage MLS 2026)
+- Formulaire de réservation pour les demandes de couverture
+- Menu mobile (hamburger) et mise en page responsive
+- Animations d'apparition au défilement avec `IntersectionObserver`
+- Filtres de portfolio par catégorie
+
+## Technologies
 
 - HTML5
-- CSS3
-- JavaScript (vanilla)
+- CSS3 (variables CSS, Flexbox, Grid, media queries)
+- JavaScript vanilla
+- Hébergement : GitHub Pages
+
+## Structure du projet
+
+```
+crispy-vision/
+├── index.html              # Accueil
+├── basketball.html         # Section basketball (événements, mixtapes, graphiques)
+├── soccer.html             # Section soccer (photos, vidéos d'équipe et individuelles)
+├── athletes.html           # Athlètes mis en avant
+├── markovic.html           # Page dédiée à Nikola Markovic
+├── booking.html            # Formulaire de réservation
+├── style.css               # Styles globaux
+├── script.js               # Interactions (menu, animations, filtres, formulaire)
+├── images/                 # Images du site
+├── logos/                  # Logos des clients
+├── Basket/                 # Médias basketball
+└── Soccer/                 # Médias soccer
+```
 
 ## Lancer le projet en local
 
-1. Cloner le dépôt :
+```bash
+git clone https://github.com/slimb-hash/crispy-vision.git
+cd crispy-vision
+```
+
+Ouvrir ensuite `index.html` dans un navigateur, ou utiliser l'extension **Live Server** de VS Code.
+
+## Ce que j'ai appris
+
+- Organiser un site multipage autour d'une feuille de style commune
+- Rendre un site lisible et utilisable sur mobile
+- Gérer un projet avec un client : recueillir ses besoins, présenter des versions et intégrer ses retours
+- Optimiser le poids des médias pour garder un chargement rapide
+
+## Auteur
+
+**Bonberry** — étudiant au baccalauréat en informatique à l'UQO
+GitHub : [@slimb-hash](https://github.com/slimb-hash)
+
+Contenu (photos, vidéos, logos) © Crispy Vision / Christopher Jean-Louis. Utilisé avec permission.
