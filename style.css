@@ -473,3 +473,8 @@ footer > p { color: var(--gray); font-size: 0.85rem; margin-bottom: 20px; }
   .sport-hero { padding: 120px 24px 60px; }
   .sport-body { padding: 80px 24px; }
 }
+/* ── BOOKING : erreurs et anti-spam ── */
+.field-error { color: #ff6b6b; font-size: 0.85rem; min-height: 1em; }
+.form-status { color: #ff6b6b; min-height: 1em; }
+.form-group [aria-invalid="true"] { border-color: #ff6b6b; }
+.hp-field { position: absolute; left: -9999px; }

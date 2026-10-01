@@ -55,22 +55,6 @@ if (filterBtns.length) {
   });
 }
 
-// ── BOOKING FORM ──
-const bookingForm = document.getElementById('bookingForm');
-if (bookingForm) {
-  bookingForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('button[type="submit"]');
-    btn.textContent = '✅ Sent! Christopher will reach out soon.';
-    btn.style.background = '#0d3d7a';
-    setTimeout(() => {
-      btn.textContent = 'Send Request 🚀';
-      btn.style.background = '';
-      this.reset();
-    }, 4000);
-  });
-}
-
 // ── ACTIVE NAV HIGHLIGHT ON SCROLL ──
 const sections = document.querySelectorAll('section[id]');
 if (sections.length) {

@@ -85,22 +85,30 @@
       <div class="booking-right reveal">
         <p class="section-label">// Request</p>
         <h2 style="margin-bottom:24px;">Book <span class="blue">Now</span></h2>
-        <form class="booking-form" id="bookingForm">
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" placeholder="John Doe" required/>
+        <form class="booking-form" id="reservationForm" novalidate>
+          <!-- Pot de miel anti-robots : invisible pour les humains -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off"/>
           </div>
           <div class="form-group">
-            <label>Email</label>
-            <input type="email" placeholder="you@email.com" required/>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" autocomplete="name" required/>
+            <p class="field-error" id="name-error"></p>
           </div>
           <div class="form-group">
-            <label>Phone (optional)</label>
-            <input type="tel" placeholder="+1 (514) 000-0000"/>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required/>
+            <p class="field-error" id="email-error"></p>
           </div>
           <div class="form-group">
-            <label>Service</label>
-            <select>
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (514) 000-0000" autocomplete="tel"/>
+            <p class="field-error" id="phone-error"></p>
+          </div>
+          <div class="form-group">
+            <label for="service">Service</label>
+            <select id="service" name="service">
               <option>Game Day Highlights</option>
               <option>Event Coverage</option>
               <option>Player Mixtape</option>
@@ -108,27 +116,33 @@
               <option>Social Media Content</option>
               <option>Athlete Feature / Mini-Doc</option>
             </select>
+            <p class="field-error" id="service-error"></p>
           </div>
           <div class="form-group">
-            <label>Sport</label>
-            <select>
+            <label for="sport">Sport</label>
+            <select id="sport" name="sport">
               <option>Basketball</option>
               <option>Soccer</option>
               <option>Other</option>
             </select>
+            <p class="field-error" id="sport-error"></p>
           </div>
           <div class="form-group">
-            <label>Event Date</label>
-            <input type="date"/>
+            <label for="eventDate">Event Date</label>
+            <input type="date" id="eventDate" name="eventDate"/>
+            <p class="field-error" id="eventDate-error"></p>
           </div>
           <div class="form-group">
-            <label>Location</label>
-            <input type="text" placeholder="Montreal, QC"/>
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" placeholder="Montreal, QC"/>
+            <p class="field-error" id="location-error"></p>
           </div>
           <div class="form-group">
-            <label>Message</label>
-            <textarea placeholder="Tell me about your event, team, or project..."></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your event, team, or project..." required></textarea>
+            <p class="field-error" id="message-error"></p>
           </div>
+          <p class="form-status" id="formStatus" role="alert"></p>
           <button type="submit" class="btn btn-blue" style="width:100%;">Book</button>
         </form>
       </div>
@@ -148,5 +162,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="booking.js"></script>
 </body>
 </html>
